@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <variable
+            name="item"
+            type="com.example.mysupermarket.Item" />
+    </data>
+
+<androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:id="@+id/cv_item">
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                >
+                <ImageView android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/iv_image"
+                    android:layout_margin="5dp"
+                    android:layout_alignParentTop="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Item Name"
+                    android:layout_below="@id/iv_image"
+                    android:id="@+id/tv_name"
+                    android:layout_centerInParent="true"
+                    android:text="@{item.type}"
+                    android:fontFamily="monospace"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="10000"
+                    android:layout_below="@id/tv_name"
+                    android:id="@+id/tv_price"
+                    android:layout_centerInParent="true"
+                    android:text="@{item.price}"
+                    android:fontFamily="monospace"
+                    android:textColor="@android:color/holo_green_light"
+                    />
+            </RelativeLayout>
+</androidx.cardview.widget.CardView>
+</layout>
